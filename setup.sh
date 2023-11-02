@@ -21,11 +21,11 @@ GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/liuhaotian/llava-v1.5-13b
 
 # download LFS files
 cd llava-v1.5-13b
-wget -N https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/mm_projector.bin
-wget -N https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00001-of-00003.bin
-wget -N https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00002-of-00003.bin
-wget -N https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00003-of-00003.bin
-wget -N https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/tokenizer.model
+curl -O https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/mm_projector.bin
+curl -O https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00001-of-00003.bin
+curl -O https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00002-of-00003.bin
+curl -O https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00003-of-00003.bin
+curl -O https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/tokenizer.model
 
 # download eval.zip
 cd ../playground/data
