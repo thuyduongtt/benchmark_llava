@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # convert dataset into jsonl format
-python convert.py --path_to_ds ${DS_DIR} --output_jsonl_name ${DS_NAME}
+python convert.py --path_to_ds ${DS_DIR} --output_jsonl_name ${DS_NAME}.jsonl
 
 if [ ! -f ${DS_NAME}.jsonl ]
 then
