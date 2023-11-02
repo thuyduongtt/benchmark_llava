@@ -37,7 +37,8 @@ source activate llava
 # cd ~/
  
 # 3. Perform experiments
-DATASET_DIR=unbalanced CUDA_VISIBLE_DEVICES=0 ./eval.sh
+DS_NAME=unbalanced
+DS_DIR=../dataset/$DS_NAME DS_NAME=$DS_NAME CUDA_VISIBLE_DEVICES=0 ./eval.sh
 
 
 # No longer exit on any error.
