@@ -3,6 +3,12 @@
 # convert dataset into jsonl format
 python convert.py --path_to_ds ${DS_DIR} --output_jsonl_name ${DS_NAME}
 
+if [ ! -f ${DS_NAME}.jsonl ]
+then
+  echo "File ${DS_NAME}.jsonl does not exist"
+  exit
+fi
+
 gpu_list="${CUDA_VISIBLE_DEVICES:-0}"
 IFS=',' read -ra GPULIST <<< "$gpu_list"
 
