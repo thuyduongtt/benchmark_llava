@@ -2,6 +2,12 @@
 
 # Please set up conda env with the name "llava" and python 3.10 before running this script
 
+if [ $CONDA_DEFAULT_ENV != 'llava' ]
+then
+  echo "Please set up the conda environment with name 'llava' and python 3.10"
+  exit
+fi
+
 git clone https://github.com/haotian-liu/LLaVA.git
 cd LLaVA
 
