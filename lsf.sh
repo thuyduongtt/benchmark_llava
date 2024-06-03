@@ -1,5 +1,5 @@
 #BSUB -J LLaVA               # Specify the job name
-#BSUB -W 24:00                # Specify the maximum runtime in "hours:minutes"
+#BSUB -W 168:00                # Specify the maximum runtime in "hours:minutes"
 #BSUB -o %x.%j.out            # Determine where the output will be written
 #BSUB -e %x.%j.err            # The same goes for the error file
  
@@ -37,8 +37,8 @@ source activate llava
 # cd ~/
  
 # 3. Perform experiments
-DS_NAME=unbalanced
-DS_DIR=../dataset/$DS_NAME DS_NAME=$DS_NAME CUDA_VISIBLE_DEVICES=0 ./eval.sh
+./scripts/run_OKVQA.sh
+#./scripts/run_VQAv2.sh
 
 
 # No longer exit on any error.

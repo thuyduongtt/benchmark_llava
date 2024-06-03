@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# convert dataset into jsonl format
-python convert.py --path_to_ds ${DS_DIR} --output_jsonl_name ${DS_NAME}.jsonl
+if [ ! -f ${DS_NAME}.jsonl ]
+then
+  # convert dataset into jsonl format
+  python convert.py --ds_name ${DS_NAME} --ds_dir ${DS_DIR} --jsonl_name ${DS_NAME}.jsonl
+fi
 
+# if jsonl file still does not exist
 if [ ! -f ${DS_NAME}.jsonl ]
 then
   echo "File ${DS_NAME}.jsonl does not exist"
@@ -20,7 +24,7 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m llava.eval.model_vqa_loader \
         --model-path LLaVA/llava-v1.5-13b \
         --question-file ${DS_NAME}.jsonl \
-        --image-folder ${DS_DIR} \
+        --image-folder ${IMG_DIR} \
         --answers-file answers/$CKPT/${DS_NAME}_${CHUNKS}_${IDX}.jsonl \
         --num-chunks $CHUNKS \
         --chunk-idx $IDX \
