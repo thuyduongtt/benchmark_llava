@@ -26,9 +26,6 @@ set -e # Exit on any error. Do not put this line before the two mandatory ones.
  
 module load conda
 
-# 1. Specify conda env
-source activate llava
-
 # To access internet within bsub script
 # module load proxy4server-access
 # source /fs/applications/p4s-access/2.0/ActivateP4S.sh -a
@@ -37,6 +34,7 @@ source activate llava
 # cd ~/
  
 # 3. Perform experiments
+source activate llava
 ./scripts/run_OKVQA.sh
 #./scripts/run_VQAv2.sh
 

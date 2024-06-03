@@ -23,11 +23,11 @@ GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/liuhaotian/llava-v1.5-13b
 cd llava-v1.5-13b
 
 # If this script doesn't work, download these files manually and put into checkpoint folder (e.g. llava-v1.5-13b)
-#wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/mm_projector.bin -O mm_projector.bin
-#wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00001-of-00003.bin -O pytorch_model-00001-of-00003.bin
-#wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00002-of-00003.bin -O pytorch_model-00002-of-00003.bin
-#wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00003-of-00003.bin -O pytorch_model-00003-of-00003.bin
-#wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/tokenizer.model -O tokenizer.model
+wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/mm_projector.bin -O mm_projector.bin
+wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00001-of-00003.bin -O pytorch_model-00001-of-00003.bin
+wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00002-of-00003.bin -O pytorch_model-00002-of-00003.bin
+wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/pytorch_model-00003-of-00003.bin -O pytorch_model-00003-of-00003.bin
+wget -q https://huggingface.co/liuhaotian/llava-v1.5-13b/resolve/main/tokenizer.model -O tokenizer.model
 
 # download eval.zip
 #cd ../playground/data

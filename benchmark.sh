@@ -1,12 +1,8 @@
 #!/bin/bash
 
-if [ ! -f ${DS_NAME}.jsonl ]
-then
-  # convert dataset into jsonl format
-  python convert.py --ds_name ${DS_NAME} --ds_dir ${DS_DIR} --jsonl_name ${DS_NAME}.jsonl
-fi
+# convert dataset into jsonl format
+python convert.py --ds_name ${DS_NAME} --ds_dir ${DS_DIR} --jsonl_name ${DS_NAME}.jsonl
 
-# if jsonl file still does not exist
 if [ ! -f ${DS_NAME}.jsonl ]
 then
   echo "File ${DS_NAME}.jsonl does not exist"
