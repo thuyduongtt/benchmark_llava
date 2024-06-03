@@ -107,7 +107,7 @@ def convert_to_jsonl_vqa(ds_dir, jsonl_name, limit=0, start_at=0, okvqa=False):
             else:
                 answers = [d['multiple_choice_answer']]
 
-            text = d['question'] + '\n'
+            text = questions[record['question_id']] + '\n'
 
             choices = [*answers]
             choices += select_choices(all_answers, answers)
